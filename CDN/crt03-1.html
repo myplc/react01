@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+    <script type="text/babel">
+        const Apps = () => {
+            const name = '리액트 연습3'
+            const img = 'https://i.namu.wiki/i/zpet8ZvSkg13uljD0n9Io-fz3LquWq08f40BrSc4PlYu0flyWLcqqjjmZWeXprll6PeyV7MBgcCUXFwEes-ek_BUTRJn00XqpCBBlnX9iYkiFvfxQmdof93REa5e-3tES7fnLf6LMs0gLGKqfqD_Og.svg'
+            const component = <div><h1>"{name}" 실습해보기</h1>
+                <img src={img} /></div>
+            return component
+        }
+        const container = document.getElementById('root')
+        // ReactDOM.render(component, container) // 18버전 이후에 아래와 같이 바뀜
+        const root = ReactDOM.createRoot(container)
+        root.render(<Apps />)
+    </script>
+</body>
+
+</html>
